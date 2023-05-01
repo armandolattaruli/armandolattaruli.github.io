@@ -29,33 +29,17 @@ body {
     /* Imposta il colore blu con opacità del 50% */
 }
 
-.overlay:hover{
+.overlay:hover {
     background-color: #00000099;
     transition: background-color 0.5s ease;
     /* Imposta il colore blu con opacità del 20% */
 }
 
-.paragrafiCards{
+.paragrafiCards {
     color: #cccccc;
     font-size: 1.2em;
 }
 
-.programmingPictures{
-    background-color: transparent;    
-    position: abrelative;
+.picProg{
+    width: 50%;
 }
-
-.programmingContainer{
-    padding:5%;
-    background-color: #0055aa;
-}
-
-@media screen and (min-width: 100px) and (max-width: 640) {
-    .uk-grid-medium > * {
-        padding-left: 0;
-    }
-    .programmingContainer{
-        padding-left: 0;
-    }
-  }
-  
