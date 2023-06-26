@@ -19,6 +19,53 @@
             background-color: #000000ff;
             opacity: 0.5;
         }
+    
+        .about-me-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .about-me-image {
+      border-radius: 50%;
+      margin-right: 20px;
+      width: 200px;
+      height: 200px;
+    }
+    
+    .about-me-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .about-me-content {
+      flex: 1;
+    }
+    
+    .about-me-links a {
+      margin-right: 10px;
+    }
+    
+    @media (max-width: 767px) {
+      .about-me-section {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .about-me-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    .about-me-links a {
+      margin-right: 10px;
+      color: #0066aa;
+    }
+
+    .about-me-links a:hover {      
+      color: #00aaee;
+    }
     </style>
 </head>
 
@@ -123,18 +170,30 @@
         </div>
     </div>
 
-    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-        <div class="uk-card-media-left uk-cover-container">
-            <img src="img/propic.jpeg" alt="" uk-cover>
-            <canvas width="600" height="400"></canvas>
-        </div>
-        <div>
-            <div class="uk-card-body">
-                <h3 class="uk-card-title">Media Left</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+    <section class="uk-section uk-section-about-me" style="background-color: #00aaee;">
+        <div class="uk-container">
+          <div class="about-me-section">
+            <div class="about-me-image">
+              <img class="uk-box-shadow-large" src="img/propic.jpeg" alt="Profile Picture" style="border-radius: 50%;" >
             </div>
+            <div class="about-me-content uk-box-shadow-large">
+              <div class="uk-card uk-card-default uk-card-body">
+                <h3 class="uk-card-title">About Me</h3>
+                <p>Mi chiamo Armando Lattaruli e sono uno sviluppatore web e di applicativi per Windows. </br>
+                    Attualme studio informatica presso l'università degli studi di Bari.</br>
+                    Oltre che di informatica, sono anche appassionato di modellazione 3D e stampa 3D.</br>
+                </p>
+                <div class="about-me-links">
+                  <a href="https://www.instagram.com/armandolattaruli" class="uk-icon-link" uk-icon="icon:instagram;ratio:1.5;"></a>
+                  <a href="https://www.linkedin.com/in/armando-lattaruli-78a561198/" class="uk-icon-link" uk-icon="icon:linkedin;ratio:1.5;"></a>
+                  <a href="https://github.com/armandolattaruli" class="uk-icon-link" uk-icon="icon:github;ratio: 1.5;"></a>
+                  <a href="https://www.facebook.com/armando.lattaruli/" class="uk-icon-link" uk-icon="icon: facebook; ratio: 1.5;"></a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </section>
     
     
     <script>
