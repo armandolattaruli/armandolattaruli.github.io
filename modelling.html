@@ -1,54 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.7.4/css/uikit.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.7.4/css/uikit.min.css" />
+    <title>Modellazione 3D - Armando Lattaruli</title>
+    <link rel="stylesheet" type="text/css" href="mainStyle.css">
 </head>
-<body>
+<body style="background-color: #232323;">
   <div class="uk-container">
-    <h1>Portfolio</h1>
+    <h1 class="uk-text-center uk-heading-medium" style="color: white;margin-top: 5%;">Modellazione 3D</h1>
+    
 
-    <ul class="uk-subnav uk-subnav-pill" uk-margin>
-      <li class="uk-active" data-tag="all"><a href="#">All</a></li>
+    <ul class="uk-subnav uk-subnav-pill" uk-margin uk-switcher uk-c>
+      <li data-tag="all"><a href="#">All</a></li>
       <li data-tag="nature"><a href="#">Nature</a></li>
       <li data-tag="architecture"><a href="#">Architecture</a></li>
       <li data-tag="people"><a href="#">People</a></li>
     </ul>
 
-    <div class="uk-grid-small uk-child-width-1-2 uk-child-width-1-4@s" uk-grid>
+    <div class="uk-grid-small uk-child-width-1-2 uk-child-width-1-4@s uk-padding-large" uk-grid>
       <div data-tags="nature">
         <a href="img/render/1.jpg" data-uk-lightbox></a>
-        <div class="uk-inline">
-          <a href="img/render/1.jpg" data-uk-lightbox>
-            <img src="img/render/1.jpg" alt="Nature">
-          </a>
-        </div>
+        <img src="img/render/1.jpg" alt="Nature">
       </div>
       <div data-tags="architecture">
         <a href="img/render/2.jpg" data-uk-lightbox></a>
-        <div class="uk-inline">
-          <a href="img/render/2.jpg" data-uk-lightbox>
-            <img src="img/render/2.jpg" alt="Architecture">
-          </a>
-        </div>
+        <img src="img/render/2.jpg" alt="Architecture">
       </div>
       <div data-tags="people">
         <a href="img/render/3.jpg" data-uk-lightbox></a>
-        <div class="uk-inline">
-          <a href="img/render/3.jpg" data-uk-lightbox>
-            <img src="img/render/3.jpg" alt="People">
-          </a>
-        </div>
+        <img src="img/render/3.jpg" alt="People">
       </div>
       <div data-tags="nature">
         <a href="img/render/4.jpg" data-uk-lightbox></a>
-        <div class="uk-inline">
-          <a href="img/render/4.jpg" data-uk-lightbox>
-            <img src="img/render/4.jpg" alt="Nature">
-          </a>
-        </div>
+        <img src="img/render/4.jpg" alt="Nature">
       </div>
       <!-- Aggiungi altre immagini qui -->
     </div>
@@ -76,9 +63,6 @@
         });
       });
     });
-
-    // Inizializza il componente Lightbox di UIKit
-    const lightbox = UIkit.lightbox('.uk-inline');
   </script>
 </body>
 </html>
