@@ -15,8 +15,10 @@
     <script src="js\uikit-icons.min.js"></script>
 </head>
 
-<body>
+<body>    
+    include 'navbar.html';
     <div class="uk-section uk-section-primary uk-background-cover" style="background-image: url(img/coding.jpeg);">
+        <object data="/navbar.html" width="100%" height="300px"></object>
         <div class="uk-container" style="background-color: #000000cc; padding:5%;" align="center">
             <h1 class="uk-text-center uk-heading-medium">Programmazione</h1>
             <p class="uk-text-center uk-text-lead">
