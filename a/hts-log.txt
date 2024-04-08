@@ -1,0 +1,16 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 08 Apr 2024 09:47:45 at https://armando.nicepage.io/?version=b141e1c4-95ac-45b3-88de-b253ddbb6432 +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://armando.nicepage.io/?version=b141e1c4-95ac-45b3-88de-b253ddbb6432 -O1 "D:\repoUni\armandolattaruli.github.io\a" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+09:48:02	Error: 	"Not Found" (404) at link https://armando.nicepage.io/Content/BundledScripts/ (from capp.nicepage.com/9d3ddad56eacc61e73ae5a9dec5b756d2967e68b/nicepage.js)
+09:48:02	Error: 	"Not Found" (404) at link https://armando.nicepage.io/signature.png (from capp.nicepage.com/9d3ddad56eacc61e73ae5a9dec5b756d2967e68b/nicepage.js)
+09:48:02	Error: 	"Not Found" (404) at link https://armando.nicepage.io/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/ (from capp.nicepage.com/9d3ddad56eacc61e73ae5a9dec5b756d2967e68b/nicepage.js)
+09:48:02	Error: 	"Bad Request" (400) at link https://pixabay.com/get/g435e4b3dc959ee131be21ba67e7d8d5eb9b34211ca0f94da292b974ab8ddfd6b7384375ee59e2bd55d30e67a904d3e66a14273b858cb3f6f4939b58c8624f239_1280.jpg (from https://armando.nicepage.io/Gallery---Armando-Lattaruli.html)
+09:48:02	Error: 	"Bad Request" (400) at link https://pixabay.com/get/gc78271a1bea0f24d7d3b59e3e9eaab7e7e91399d18baa416f8ede7afa875fc60dbb6db0e50652dcb1239e2509cd6a165a8b3ee97402fa8b38b7e98447a25fedc_1280.jpg (from https://armando.nicepage.io/Gallery---Armando-Lattaruli.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 17 seconds : 27 links scanned, 21 files written (8141755 bytes overall) [5695507 bytes received at 335029 bytes/sec], 2834866 bytes transferred using HTTP compression in 13 files, ratio 12%, 2.7 requests per connection
+(5 errors, 0 warnings, 0 messages)
