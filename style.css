@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+
+body {
+  margin:0;
+  padding:0;
+  background-color:#0d1117;
+  font-family:'Fira Mono', monospace;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #00c076, #01a4b6, #a800a8, #00ad1a);
+  background-size: 400% 400%;
+  z-index: -1; /* rimane dietro il terminale */
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.terminal {
+  background:#161b22;
+  width:100%;
+  max-width:70%;
+  border-radius:8px;
+  box-shadow: 20px  #00738086;
+  overflow:hidden;
+}
+
+.terminal-header {
+  display:flex;
+  align-items:center;
+  background:#1b1f26;
+  padding:10px 15px;
+}
+
+.circle {
+  display:inline-block;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  margin-right:5px;
+}
+
+.red { background:#ff5f57; }
+.yellow { background:#ffbd2e; }
+.green { background:#28c840; }
+
+.title {
+  color:#00e5ff;
+  font-weight:bold;
+  margin-left:10px;
+}
+
+.terminal-body {
+  padding:15px;
+  min-height:400px;
+  white-space:pre-wrap;
+  overflow-y:auto;
+  line-height:1.4em;
+  color:#00ff9c;
+}
+
+.username { color:#00e5ff; }      /* armando */
+.hostname { color:#ff6fff; }      /* @nome_sezione */
+.path { color:#ffd700; }          /* ~/path */
+.text { color:#ffffff; }          /* testo normale */
+.link { color:#00ffff; text-decoration:none; } /* link social */
+.icon { margin-right:5px; color:#00ffff; }
