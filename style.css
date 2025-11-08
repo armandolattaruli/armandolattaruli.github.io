@@ -65,7 +65,7 @@ body::before {
   margin-left:10px;
 }
 
-.terminal-body {
+.terminalBody {
   padding:15px;
   min-height:400px;
   white-space:pre-wrap;
