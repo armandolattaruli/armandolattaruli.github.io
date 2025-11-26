@@ -41,6 +41,7 @@ function typeNextChar() {
     if(line.startsWith('GitHub')) { icon = '<i class="fab fa-github icon"></i>'; url = line.split(' ')[1]; }
     else if(line.startsWith('LinkedIn')) { icon = '<i class="fab fa-linkedin icon"></i>'; url = line.split(' ')[1]; }
     else if(line.startsWith('Twitter')) { icon = '<i class="fab fa-twitter icon"></i>'; url = line.split(' ')[1]; }
+    // add here more lines for each social icon
 
     terminalBody.innerHTML += icon + line.split(':')[0] + ': <a href="'+url+'" class="link">'+url+'</a>\n';
     socialLine++;

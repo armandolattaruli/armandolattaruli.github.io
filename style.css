@@ -30,11 +30,10 @@ body::before {
   100% { background-position: 0% 50%; }
 }
 
-
 .terminal {
   background:#161b22;
   width:100%;
-  max-width:70%;
+  max-width:80%;
   border-radius:8px;
   box-shadow: 20px  #00738086;
   overflow:hidden;
@@ -80,3 +79,17 @@ body::before {
 .text { color:#ffffff; }          /* testo normale */
 .link { color:#00ffff; text-decoration:none; } /* link social */
 .icon { margin-right:5px; color:#00ffff; }
+
+@media (min-width: 100px) and (max-width: 600px) {
+  .terminal{
+    max-width: 95%;
+  }
+  
+  .circle {
+    display:inline-block;
+    width:13px;
+    height:13px;
+    border-radius:50%;
+    margin-right:5px;
+  }
+}
