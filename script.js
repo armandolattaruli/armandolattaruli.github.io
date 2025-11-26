@@ -1,10 +1,10 @@
 const sections = [
-  { section:'bio', text:'Appassionato di informatica, cybersecurity e automazione. Unisco curiosità tecnica e spirito hacker.\n\n' },
-  { section:'esperienze_estero', text:'Viaggi studio e progetti tech in diversi paesi europei, esplorando culture e metodologie diverse.\n\n' },
-  { section:'esperienze_lavorative', text:'Collaborazioni in ambito cybersecurity, analisi vulnerabilità e sviluppo software orientato alla sicurezza.\n\n' },
-  { section:'titoli', text:'Laurea in Informatica, corsi avanzati in sicurezza informatica, sviluppo backend e automazione.\n\n' },
-  { section:'social', text:'GitHub: https://github.com/#\nLinkedIn: https://linkedin.com/#\nTwitter: https://twitter.com/#\n\n', isSocial:true },
-  { section:'cyber', text:'Esperienza con strumenti SIEM ed EDR, analisi incidenti e processi di hardening.\n' },
+  { section:'bio', text:'\n' },
+  { section:'esperienze_estero', text:'\n' },
+  { section:'esperienze_lavorative', text:'\n' },
+  { section:'titoli', text:'\n' },
+  { section:'social', text:'GitHub: https://github.com/#\nLinkedIn: https://linkedin.com/#\nTwitter: https://twitter.com/#\n', isSocial:true },
+  { section:'cyber', text:'\n' },
   { section:'cv', text:'Download CV: [link placeholder]\n' }
 ];
 
