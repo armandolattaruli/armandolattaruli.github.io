@@ -80,6 +80,12 @@ body::before {
 .link { color:#00ffff; text-decoration:none; } /* link social */
 .icon { margin-right:5px; color:#00ffff; }
 
+.social-line {
+  display: inline-block;
+  margin-left: 2ch;
+}
+
+
 @media (min-width: 100px) and (max-width: 600px) {
   .terminal{
     max-width: 95%;

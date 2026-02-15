@@ -1,11 +1,11 @@
 const sections = [
   { section:'bio', text:'\n' },
-  { section:'esperienze_estero', text:'\n' },
-  { section:'esperienze_lavorative', text:'\n' },
-  { section:'titoli', text:'\n' },
-  { section:'social', text:'GitHub: https://github.com/#\nLinkedIn: https://linkedin.com/#\nTwitter: https://twitter.com/#\n', isSocial:true },
-  { section:'cyber', text:'\n' },
-  { section:'cv', text:'Download CV: [link placeholder]\n' }
+  { section:'internationalExperiences', text:'\n' },
+  { section:'workExperience', text:'\n' },
+  { section:'academicQualifications', text:'\n' },
+  { section:'social', text:'GitHub: https://github.com/#\nLinkedIn: https://linkedin.com/#\nTwitter: https://twitter.com/# \n\n', isSocial:true },
+  // { section:'cyber', text:'\n' },
+  { section:'cv', text:'Download CV: mailto:armandolattaruli@gmail.com\n' }
 ];
 
 let i = 0;
@@ -18,10 +18,11 @@ function typeNextChar() {
   const sec = sections[i];
 
   // se è la prima lettera della sezione, stampa il prompt
-  if(j === 0 && !sec.isSocial) {
-    const prompt = `<span class="username">armando</span><span class="hostname">@${sec.section}</span> <span class="path">~/portfolio</span>\n`;
-    terminalBody.innerHTML += prompt;
-  }
+if (j === 0 && !sec.isSocial) {
+  const prompt = `\n<span class="username">armando</span><span class="hostname">@portfolio</span> <span class="path">~/${sec.section}</span>\n`;
+  terminalBody.innerHTML += prompt;
+}
+
 
   if(sec.isSocial) {
     // social: processa riga per riga
@@ -41,13 +42,16 @@ function typeNextChar() {
     if(line.startsWith('GitHub')) { icon = '<i class="fab fa-github icon"></i>'; url = line.split(' ')[1]; }
     else if(line.startsWith('LinkedIn')) { icon = '<i class="fab fa-linkedin icon"></i>'; url = line.split(' ')[1]; }
     else if(line.startsWith('Twitter')) { icon = '<i class="fab fa-twitter icon"></i>'; url = line.split(' ')[1]; }
-    // add here more lines for each social icon
+    //  more lines for each social icon??
 
-    terminalBody.innerHTML += icon + line.split(':')[0] + ': <a href="'+url+'" class="link">'+url+'</a>\n';
+    terminalBody.innerHTML +=
+      `<span class="social-line">${icon}${line.split(':')[0]}: <a href="${url}" class="link">${url}</a></span>\n`;
+
+
     socialLine++;
     terminalBody.scrollTop = terminalBody.scrollHeight;
 
-    setTimeout(typeNextChar, 50);
+    setTimeout(typeNextChar, 100);
     return;
   }
 
