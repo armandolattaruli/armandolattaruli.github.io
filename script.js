@@ -5,7 +5,7 @@ const sections = [
   { section:'academicQualifications', text:'\n' },
   { section:'social', text:'GitHub: https://github.com/#\nLinkedIn: https://linkedin.com/#\nTwitter: https://twitter.com/# \n\n', isSocial:true },
   // { section:'cyber', text:'\n' },
-  { section:'cv', text:'Download CV: mailto:armandolattaruli@gmail.com\n' }
+  { section:'cv',  text:'Interested? Request my CV here: <a href="mailto:armando@email.com?subject=CV%20Request" class="link">armando@email.com</a>\n' }
 ];
 
 let i = 0;
@@ -56,6 +56,15 @@ if (j === 0 && !sec.isSocial) {
   }
 
   // testo normale
+  // if section contains HTML, render all at once
+if (sec.section === 'cv') {
+  terminalBody.innerHTML += sec.text;
+  i++;
+  j = 0;
+  setTimeout(typeNextChar, 100);
+  return;
+}
+
   const char = sec.text[j];
   terminalBody.innerHTML += `<span class="text">${char}</span>`;
   j++;
