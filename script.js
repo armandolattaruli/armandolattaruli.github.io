@@ -1,9 +1,9 @@
 const sections = [
   { section:'bio', text:'Constantly learning and sharpening my knowledge across all things cybersecurity. I’m a SOC Analyst currently fighting for the good side, but I’m deeply into red-team thinking, Linux internals, and anything involving networks. \nIf it can be analyzed, broken, secured, or all three, I’m probably interested.\n' },
-  { section:'internationalExperiences', text:'\n' },
+  { section:'internationalExperiences', text:'In September 2021 I moved to the Netherland enrolling in the computer science program.\nIn the summer of 2022 I took part' },
   { section:'workExperience', text:'\n' },
   { section:'academicQualifications', text:'\n' },
-  { section:'social', text:'GitHub: https://github.com/#\nLinkedIn: https://linkedin.com/#\n', isSocial:true },
+  { section:'social', text:'GitHub: https://github.com/armandolattaruli#\nLinkedIn: https://www.linkedin.com/in/armando-lattaruli\n', isSocial:true },
   // { section:'cyber', text:'\n' },
   { section:'cv',  text:'Interested? Request my CV here: <a href="mailto:armandolattaruli@gmail.com?subject=CV%20Request" class="link">armandolattaruli@gmail.com</a>\n' }
 ];
