@@ -1,7 +1,14 @@
 const sections = [
   { section:'bio', text:'Constantly learning and sharpening my knowledge across all things cybersecurity. I’m a SOC Analyst currently fighting for the good side, but I’m deeply into red-team thinking, Linux internals, and anything involving networks. \nIf it can be analyzed, broken, secured, or all three, I’m probably interested.\n' },
   { section:'internationalExperiences', text:'In September 2021 I moved to the Netherland enrolling in the computer science program.\nIn the summer of 2022 I took part' },
-  { section:'workExperience', text:'\n' },
+
+  // MODIFICATO: workExperience ora è una lista, formato per riga: icona|colore|testo
+  { section:'workExperience', isList:true, text:
+    'fa-shield-halved|#ffffff|SOC Analyst L1 @ Deloitte (Bari), since January 2025\n' +
+    'fa-user-secret|#ff3b3b|Phishing analysis and threat hunting with KQL and SPL\n' +
+    'fa-magnifying-glass-chart|#4da6ff|Alert triage on SIEM/EDR (Splunk, Sentinel, CrowdStrike)\n'
+  },
+
   { section:'academicQualifications', text:'\n' },
   { section:'social', text:'GitHub: https://github.com/armandolattaruli#\nLinkedIn: https://www.linkedin.com/in/armando-lattaruli\n', isSocial:true },
   // { section:'cyber', text:'\n' },
@@ -11,21 +18,51 @@ const sections = [
 let i = 0;
 let j = 0;
 let socialLine = 0;
+let listLine = 0; // NUOVO: contatore per le liste
 
 function typeNextChar() {
   if(i >= sections.length) return;
 
   const sec = sections[i];
 
-  // se è la prima lettera della sezione, stampa il prompt
-if (j === 0 && !sec.isSocial) {
-  const prompt = `\n<span class="username">armando</span><span class="hostname">@portfolio</span> <span class="path">~/${sec.section}</span>\n`;
-  terminalBody.innerHTML += prompt;
-}
+  // MODIFICATO: aggiunto && !sec.isList (il prompt delle liste lo stampa il blocco lista)
+  if (j === 0 && !sec.isSocial && !sec.isList) {
+    const prompt = `\n<span class="username">armando</span><span class="hostname">@portfolio</span> <span class="path">~/${sec.section}</span>\n`;
+    terminalBody.innerHTML += prompt;
+  }
 
+  // NUOVO: blocco per le liste con icone personalizzate
+  if (sec.isList) {
+    const lines = sec.text.trim().split('\n');
+
+    // prompt stampato una volta sola, prima della prima riga
+    if (listLine === 0) {
+      terminalBody.innerHTML +=
+        `\n<span class="username">armando</span><span class="hostname">@portfolio</span> <span class="path">~/${sec.section}</span>\n`;
+    }
+
+    // finite le righe: passa alla sezione successiva
+    if (listLine >= lines.length) {
+      listLine = 0;
+      i++;
+      j = 0;
+      setTimeout(typeNextChar, 100);
+      return;
+    }
+
+    const [iconClass, color, ...rest] = lines[listLine].split('|');
+    const text = rest.join('|');
+
+    terminalBody.innerHTML +=
+      `<span class="list-line"><i class="fas ${iconClass} bullet-icon" style="color:${color}"></i><span class="text">${text}</span></span>\n`;
+
+    listLine++;
+    terminalBody.scrollTop = terminalBody.scrollHeight;
+    setTimeout(typeNextChar, 300);
+    return;
+  }
 
   if(sec.isSocial) {
-    // social: processa riga per riga
     const lines = sec.text.trim().split('\n');
     if(socialLine >= lines.length) {
       socialLine = 0;
@@ -42,11 +79,9 @@ if (j === 0 && !sec.isSocial) {
     if(line.startsWith('GitHub')) { icon = '<i class="fab fa-github icon"></i>'; url = line.split(' ')[1]; }
     else if(line.startsWith('LinkedIn')) { icon = '<i class="fab fa-linkedin icon"></i>'; url = line.split(' ')[1]; }
     else if(line.startsWith('Twitter')) { icon = '<i class="fab fa-twitter icon"></i>'; url = line.split(' ')[1]; }
-    //  more lines for each social icon??
 
     terminalBody.innerHTML +=
       `<span class="social-line">${icon}${line.split(':')[0]}: <a href="${url}" class="link">${url}</a></span>\n`;
-
 
     socialLine++;
     terminalBody.scrollTop = terminalBody.scrollHeight;
@@ -55,23 +90,23 @@ if (j === 0 && !sec.isSocial) {
     return;
   }
 
-  // testo normale
-  // if section contains HTML, render all at once
-if (sec.section === 'cv') {
-  terminalBody.innerHTML += sec.text;
-  i++;
-  j = 0;
-  setTimeout(typeNextChar, 100);
-  return;
-}
+  // se la sezione contiene HTML, renderizza tutto insieme
+  if (sec.section === 'cv') {
+    terminalBody.innerHTML += sec.text;
+    i++;
+    j = 0;
+    setTimeout(typeNextChar, 100);
+    return;
+  }
 
+  // testo normale, carattere per carattere
   const char = sec.text[j];
   terminalBody.innerHTML += `<span class="text">${char}</span>`;
   j++;
   terminalBody.scrollTop = terminalBody.scrollHeight;
 
   if(j < sec.text.length) setTimeout(typeNextChar, 20);
-  else { j = 0; i++; setTimeout(typeNextChar, 100); }
+  else { j = 0; i++; setTimeout(typeNextChar, 1); }
 }
 
 typeNextChar();
