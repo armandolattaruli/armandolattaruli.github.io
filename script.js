@@ -4,9 +4,9 @@ const sections = [
 
   // MODIFICATO: workExperience ora è una lista, formato per riga: icona|colore|testo
   { section:'workExperience', isList:true, text:
-    'fa-shield-halved|#ffffff|SOC Analyst L1 @ Deloitte (Bari), since January 2025\n' +
-    'fa-user-secret|#ff3b3b|Phishing analysis and threat hunting with KQL and SPL\n' +
-    'fa-magnifying-glass-chart|#4da6ff|Alert triage on SIEM/EDR (Splunk, Sentinel, CrowdStrike)\n'
+    'fa-shield-halved icon |#ffffff|SOC Analyst L1/L2 @ Deloitte (Bari), since January 2025\n' +
+    'fa-user-secret|#ff3b3b icon |Phishing analysis and threat hunting with KQL and SPL\n' +
+    'fa-magnifying-glass-chart icon |#4da6ff|Alert triage on SIEM/EDR (Splunk, Sentinel, CrowdStrike)\n'
   },
 
   { section:'academicQualifications', text:'\n' },
@@ -105,7 +105,7 @@ function typeNextChar() {
   j++;
   terminalBody.scrollTop = terminalBody.scrollHeight;
 
-  if(j < sec.text.length) setTimeout(typeNextChar, 20);
+  if(j < sec.text.length) setTimeout(typeNextChar, 1);
   else { j = 0; i++; setTimeout(typeNextChar, 1); }
 }
 
