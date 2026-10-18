@@ -1,6 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
 
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0d1117;
+  border-radius: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00e5ff;
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff0055;
+}
 
 body {
   margin:0;
