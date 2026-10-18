@@ -36,7 +36,7 @@ function typeNextChar() {
   const isFirst = sec.items ? k === 0 : j === 0;
   if (isFirst && sec.prompt !== false) {
     terminalBody.innerHTML +=
-      `\n<span class="username">armando</span><span class="hostname">@portfolio</span> <span class="path">~/${sec.section}</span>\n`;
+  `\n<span class="prompt-line"><span class="username">armando</span><span class="hostname">@portfolio</span> <span class="path">~/${sec.section}</span></span>`;
   }
 
   // liste con icona (work experience e social)
