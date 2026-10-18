@@ -10,7 +10,11 @@ const sections = [
     { icon:'fas fa-magnifying-glass-chart', color:'#28c840', text:' Alert triage on SIEM/EDR (Splunk, Sentinel, CrowdStrike, Netwitness, SentinelOne)' },
   ]},
 
-  { section:'academicQualifications', text:'\n' },
+  { section:'academicQualifications', 
+    items:[
+    { icon:'fa fa-graduation-cap', text:` Bachelor degree in Computer Science @ Uniba, 2024.` },
+    { icon:'fa fa-gun', text:` Currently studying for the EJPT certificaion.` },
+  ]},
 
   // prompt:false = nessun prompt, come nel tuo originale
   { section:'social', items:[
