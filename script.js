@@ -5,9 +5,9 @@ const sections = [
   { section:'internationalExperiences', text:'In September 2021 I moved to the Netherland enrolling in the computer science program.\nIn the summer of 2022, I took part in the "Strategic Thinking" Erasmus project, where I worked for a Maltese company on the development of proctoring software.\n' },
 
   { section:'workExperience', items:[
-    { icon:'fas fa-shield-halved', color:'#ffffff', text:' SOC Analyst L1/L2 @ Deloitte (Bari), since January 2025' },
+    { icon:'fas fa-shield-halved', color:'#4da6ff', text:' SOC Analyst L1/L2 @ Deloitte (Bari), since January 2025' },
     { icon:'fas fa-user-secret', color:'#ff3b3b', text:' Phishing analysis and case-by-case queries with KQL and SPL' },
-    { icon:'fas fa-magnifying-glass-chart', color:'#4da6ff', text:' Alert triage on SIEM/EDR (Splunk, Sentinel, CrowdStrike, Netwitness, SentinelOne)' },
+    { icon:'fas fa-magnifying-glass-chart', color:'#28c840', text:' Alert triage on SIEM/EDR (Splunk, Sentinel, CrowdStrike, Netwitness, SentinelOne)' },
   ]},
 
   { section:'academicQualifications', text:'\n' },
