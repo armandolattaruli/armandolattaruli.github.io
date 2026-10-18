@@ -2,7 +2,7 @@ const link = url => `<a href="${url}" class="link">${url}</a>`;
 
 const sections = [
   { section:'bio', text:'Constantly learning and sharpening my knowledge across all things cybersecurity. I’m a SOC Analyst currently fighting for the good side, but I’m deeply into red-team thinking, Linux internals, and anything involving networks. \nIf it can be analyzed, broken, secured, or all three, I’m probably interested.\n' },
-  { section:'internationalExperiences', text:'In September 2021 I moved to the Netherland enrolling in the computer science program.\nIn the summer of 2022 I took part' },
+  { section:'internationalExperiences', text:'In September 2021 I moved to the Netherland enrolling in the computer science program.\nIn the summer of 2022, I took part in the "Strategic Thinking" Erasmus project, where I worked for a Maltese company on the development of proctoring software.\n' },
 
   { section:'workExperience', items:[
     { icon:'fas fa-shield-halved', color:'#ffffff', text:' SOC Analyst L1/L2 @ Deloitte (Bari), since January 2025' },
