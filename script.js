@@ -4,9 +4,9 @@ const sections = [
 
   // MODIFICATO: workExperience ora è una lista, formato per riga: icona|colore|testo
   { section:'workExperience', isList:true, text:
-    'fa-shield-halved icon |#ffffff|SOC Analyst L1/L2 @ Deloitte (Bari), since January 2025\n' +
-    'fa-user-secret|#ff3b3b icon |Phishing analysis and threat hunting with KQL and SPL\n' +
-    'fa-magnifying-glass-chart icon |#4da6ff|Alert triage on SIEM/EDR (Splunk, Sentinel, CrowdStrike)\n'
+    'fa-shield-halved icon |#ffffff| SOC Analyst L1/L2 @ Deloitte (Bari), since January 2025\n' +
+    'fa-user-secret|#ff3b3b icon | Phishing analysis and case-by-case queries with KQL and SPL\n' +
+    'fa-magnifying-glass-chart icon |#4da6ff| Alert triage on SIEM/EDR (Splunk, Sentinel, CrowdStrike, Netwitness, SentinelOne)\n'
   },
 
   { section:'academicQualifications', text:'\n' },
