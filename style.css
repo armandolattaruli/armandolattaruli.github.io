@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
 
+
+
 body {
   margin:0;
   padding:0;
@@ -8,8 +10,11 @@ body {
   display:flex;
   justify-content:center;
   align-items:center;
-  height:100vh;
+  height:100vh;   /* fallback per browser vecchi */
+  height:100dvh;  /* altezza reale su mobile */
+  box-sizing:border-box;
 }
+
 
 body::before {
   content: '';
@@ -34,12 +39,17 @@ body::before {
   background:#161b22;
   width:100%;
   max-width:80%;
+  max-height:90vh;   /* fallback */
+  max-height:90dvh;
+  display:flex;
+  flex-direction:column;
   border-radius:8px;
   box-shadow: 20px  #00738086;
   overflow:hidden;
 }
 
 .terminal-header {
+  flex:none;   /* l'intestazione resta sempre visibile */
   display:flex;
   align-items:center;
   background:#1b1f26;
@@ -65,10 +75,13 @@ body::before {
 }
 
 .terminalBody {
-  padding:15px;
+  flex:1;
   min-height:400px;
-  white-space:pre-wrap;
   overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior:contain;
+  padding:15px;
+  white-space:pre-wrap;
   line-height:1.4em;
   color:#00ff9c;
 }
