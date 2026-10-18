@@ -13,7 +13,7 @@ const sections = [
   { section:'academicQualifications', 
     items:[
     { icon:'fa fa-graduation-cap', text:` Bachelor degree in Computer Science @ Uniba, 2024.` },
-    { icon:'fa fa-gun', text:` Currently studying for the EJPT certificaion.` },
+    { icon:'fa fa-gun', color:'#ff3b3b', text:` Currently studying for the EJPT certificaion.` },
   ]},
 
   // prompt:false = nessun prompt, come nel tuo originale
