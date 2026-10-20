@@ -18,8 +18,8 @@ const sections = [
 
   // prompt:false = nessun prompt, come nel tuo originale
   { section:'social', items:[
-    { icon:'fab fa-github',   text:`GitHub: ${link('https://github.com/armandolattaruli')}` },
-    { icon:'fab fa-linkedin', text:`LinkedIn: ${link('https://www.linkedin.com/in/armando-lattaruli')}` },
+    { icon:'fab fa-github',   text:` GitHub: ${link('https://github.com/armandolattaruli')}` },
+    { icon:'fab fa-linkedin', text:` LinkedIn: ${link('https://www.linkedin.com/in/armando-lattaruli')}` },
   ]},
 
   // raw:true = HTML stampato tutto insieme
